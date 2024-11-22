@@ -5,6 +5,7 @@ import MovieDetails from "@/app/(movies)/movies/MoviesDetails/MovieDetails";
 
 
 
+
 const MoviesPage = async () => {
     const allMovies = await getMovies.getAllMovies();
 

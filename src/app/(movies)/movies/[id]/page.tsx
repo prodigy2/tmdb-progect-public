@@ -17,9 +17,6 @@ const MoviePage = async ({params}: {params: Params}) => {
              {movie?.title}
 
             <div>{JSON.stringify(movie)}</div>
-
-
-
         </div>
     );
 };

@@ -3,10 +3,10 @@ import React from "react";
 const UserInfo = () => {
     return (
         <div style={styles.container}>
-            <div style={styles.avatar}>U</div>
+        <div style={styles.avatar}>U</div>
             <span style={styles.name}>John Doe</span>
-        </div>
-    );
+    </div>
+);
 };
 
 const styles = {

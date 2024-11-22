@@ -1,7 +1,7 @@
 import React from 'react';
 import NavLinkClient from "@/app/components/Header/NavLinkClient";
 import './header.css'
-import UserInfo from "@/app/components/UserInfo/UserInfo";
+import UserInfo from "@/app/components/UserInfo/userInfo";
 
 const Menu = () => {
     return (

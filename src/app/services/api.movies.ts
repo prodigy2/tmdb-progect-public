@@ -22,8 +22,6 @@ import {IMovie} from "../../../types";
          console.log(movie);
          return movie.results;
      },
-     //https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=GENRE_ID
-
  }
 
  export default getMovies

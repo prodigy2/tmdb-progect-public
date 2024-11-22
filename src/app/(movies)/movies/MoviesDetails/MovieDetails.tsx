@@ -1,6 +1,9 @@
 import React, {FC} from 'react';
 import Link from "next/link";
 import {IMovie} from "../../../../../types";
+import StarsRating from "@/app/components/StarsRating/StarsRating";
+import PosterPreview from "@/app/components/PosterPreview/PosterPreview";
+
 
 interface IProps {
     movie: IMovie;
@@ -11,12 +14,12 @@ const MovieDetails: FC<IProps> = ({movie }) => {
             <Link href={`/movies/${movie.id}`}>
                 <li key={movie.id} className="movie-item">
 
-                    <img
-                        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                        alt={movie.title}
-                    />
+
+                    <PosterPreview posterPath={movie.poster_path} />
                     <h3>{movie.title}</h3>
-                    <p>Vote: {movie.vote_average}</p>
+
+                    <p>Vote: {Math.round( movie.vote_average)}</p>
+                    <StarsRating rating={movie.vote_average}/>
                 </li></Link>
 
 
