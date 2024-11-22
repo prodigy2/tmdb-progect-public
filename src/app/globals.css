@@ -22,12 +22,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 * {
   box-sizing: border-box;
+
   padding: 0;
-  margin: 0;
+  margin: 5px;
 }
 
 a {
@@ -39,4 +41,58 @@ a {
   html {
     color-scheme: dark;
   }
+
+}
+
+
+/* File: src/styles/movies.css */
+
+/* Griglia dei film */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonne */
+  gap: 20px; /* Spaziatura tra i film */
+  padding: 20px;
+  list-style: none;
+}
+
+/* Stile base per ogni film */
+.movie-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+/* Stile immagine */
+.movie-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Titolo e descrizione */
+.movie-item h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.movie-item p {
+  margin: 5px 0 15px;
+  color: #666;
+}
+
+/* Effetto al passaggio del mouse */
+.movie-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.movie_card img{
+  height: 400px;
+  width: 300px;
 }

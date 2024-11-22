@@ -1,0 +1,38 @@
+.active{
+    background: #babada;
+}
+.header{
+
+    background: azure;
+
+}
+.nav{
+    width: 1400px;
+    height: 113px;
+    background: #7b71ae;
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    list-style: none;
+    font-size: 18px;
+
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    padding: 63px;
+}
