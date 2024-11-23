@@ -22,6 +22,17 @@ import {IMovie} from "../../../types";
          console.log(movie);
          return movie.results;
      },
+
+  searchMovies: async (query: string): Promise<IMovie[]> => {
+         if (!query) return [];
+         const movies = await fetch(
+             `https://api.themoviedb.org/3/search/movie?api_key=${process.env.NEXT_PUBLIC_API_KEY}&query=${encodeURIComponent(
+                 query
+             )}`
+         ).then((value) => value.json());
+         console.log(movies);
+         return movies.results || [];
+     }
  }
 
  export default getMovies
