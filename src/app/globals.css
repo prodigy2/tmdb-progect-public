@@ -28,8 +28,8 @@ body {
 * {
   box-sizing: border-box;
 
-  padding: 3px;
-  margin: 5px;
+  padding: 2px;
+  margin: 4px;
 }
 
 a {
@@ -92,19 +92,69 @@ a {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+.genres-button{
+  width: 220px;
+  height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(231, 231, 236, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #333;
+  box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, 0.04);
+}
+
+.genres-button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.genres-box{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
 .movie_card img{
-  height: 400px;
-  width: 300px;
+  height: 460px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.movie-box{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.movie-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.movie-text {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 180px 10px 0;
+  color: #333;
 }
 
-.movies{
+.movie-text h1{
+  display: flex;
+  align-items: center;
 
 }
-
-
-
-
+.movie-text p{
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
 
 
 

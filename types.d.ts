@@ -11,6 +11,18 @@ export interface IMovie {
     overview: string;
     genre_ids: number[];
     badges:number[];
+    origin_country: string;
+    original_title: string;
+    popularity: number;
+    name: string;
+    original_language;
+    release_date: number;
+    runtime: number;
+    spoken_languages: string;
+    status: string;
+    tagline: string;
+    vote_count: number;
+    production_companies: string
 }
 export interface IGenre {
     id: number;

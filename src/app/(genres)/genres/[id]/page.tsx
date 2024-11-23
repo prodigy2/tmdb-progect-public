@@ -8,12 +8,13 @@ const MoviesPage = async ({params}: {params: Params}) => {
     const allMovies = await getMovies.getMovieByGenre(params.id);
 
     return (
-        <div className="movies">
+
+        <div >
             <ul className="movie-grid">
                 {Array.isArray(allMovies) && allMovies.length > 0
                     ? allMovies.map((movie: IMovie) => (
                         <li key={movie.id} className="movie-item">
-                            <MovieDetails movie={movie} />
+                            <MovieDetails movie={movie}/>
                         </li>
                     ))
                     : <p>No movies available</p>

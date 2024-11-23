@@ -1,5 +1,5 @@
 
-//export const base = {
-//     baseURL:'https://api.themoviedb.org/3',
-// }
+export const base = {
+     baseURL:'https://api.themoviedb.org/3',
+ }
 

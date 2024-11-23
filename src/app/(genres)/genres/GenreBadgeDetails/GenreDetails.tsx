@@ -8,7 +8,7 @@ interface IProps {
 const GenreDetails: FC<IProps> = ({genre }) => {
     return (
         <div>
-            <Link href={`/genres/${genre.id}`}><button>{genre.name}</button></Link>
+            <Link href={`/genres/${genre.id}`}><button className={"genres-button"}>{genre.name}</button></Link>
 
         </div>
     );

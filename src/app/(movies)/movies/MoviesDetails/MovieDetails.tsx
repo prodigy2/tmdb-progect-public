@@ -14,7 +14,6 @@ const MovieDetails: FC<IProps> = ({movie }) => {
             <Link href={`/movies/${movie.id}`}>
                 <li key={movie.id} className="movie-item">
 
-
                     <PosterPreview posterPath={movie.poster_path} />
                     <h3>{movie.title}</h3>
 

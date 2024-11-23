@@ -10,13 +10,13 @@ const GenresPage = async () => {
     return (
         <div>
 
-            <ul>
+            <ul className={"genres-box"}>
                 {
                     Array.isArray(allGenres) && allGenres.length > 0
                         ? allGenres.map((genre: IGenre) => (
 
 
-                            <li key={genre.id} > <GenreDetails genre={genre}/></li>
+                            <li  key={genre.id} > <GenreDetails genre={genre}/></li>
                         ))
                         : <p></p>
                 }
