@@ -9,9 +9,7 @@ const Menu = () => {
 
             <ul className={'nav'}>
                 <li><UserInfo /></li>
-                <li>
-                    <NavLinkClient path={'/'}>Home</NavLinkClient>
-                </li>
+
                 <li>
                     <NavLinkClient path={'/movies'}>Movies</NavLinkClient>
                 </li>

@@ -3,10 +3,12 @@ import React from "react";
 const UserInfo = () => {
     return (
         <div style={styles.container}>
-        <div style={styles.avatar}>U</div>
+            <div style={styles.avatarContainer}>
+                <img src='avatar.jpg' alt="User Avatar" style={styles.avatarImage} />
+            </div>
             <span style={styles.name}>John Doe</span>
-    </div>
-);
+        </div>
+    );
 };
 
 const styles = {
@@ -15,17 +17,19 @@ const styles = {
         alignItems: "center",
         gap: "10px",
     },
-    avatar: {
+    avatarContainer: {
         width: "40px",
         height: "40px",
         borderRadius: "50%",
-        backgroundColor: "#4A90E2",
-        color: "#fff",
+        overflow: "hidden", // Per assicurarsi che l'immagine sia rotonda
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        fontWeight: "bold",
-        fontSize: "16px",
+    },
+    avatarImage: {
+        width: "100%",
+        height: "100%",
+        objectFit: "cover", // Adatta l'immagine all'area del contenitore
     },
     name: {
         fontSize: "14px",
