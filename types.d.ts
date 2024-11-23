@@ -20,11 +20,9 @@ export interface IGenre {
 export interface IProps {
     movies: IMovie[];
     genres: IGenre[];
-
     movie: string;
     genre: string;
     overview: string;
-
     description: string;
     badges: number[];
 }

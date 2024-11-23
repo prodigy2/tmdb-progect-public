@@ -14,12 +14,6 @@ const MoviesPage = async ({params}: {params: Params}) => {
                     ? allMovies.map((movie: IMovie) => (
                         <li key={movie.id} className="movie-item">
                             <MovieDetails movie={movie} />
-                            <img
-                                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                                alt={movie.title}
-                            />
-                            <h3>{movie.title}</h3>
-                            <p>Vote: {movie.vote_average}</p>
                         </li>
                     ))
                     : <p>No movies available</p>

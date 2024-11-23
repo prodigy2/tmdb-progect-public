@@ -2,10 +2,8 @@
     background: #babada;
 }
 .header{
-
-    background: azure;
-
 }
+
 .nav{
     width: 1400px;
     height: 113px;
@@ -14,10 +12,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
     list-style: none;
     font-size: 18px;
-
 }
 
 nav ul{

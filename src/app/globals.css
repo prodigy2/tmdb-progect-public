@@ -28,7 +28,7 @@ body {
 * {
   box-sizing: border-box;
 
-  padding: 0;
+  padding: 3px;
   margin: 5px;
 }
 
@@ -54,6 +54,7 @@ a {
   gap: 20px; /* Spaziatura tra i film */
   padding: 20px;
   list-style: none;
+
 }
 
 /* Stile base per ogni film */
@@ -96,3 +97,33 @@ a {
   height: 400px;
   width: 300px;
 }
+
+.movies{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
