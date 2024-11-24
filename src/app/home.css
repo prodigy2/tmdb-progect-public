@@ -1,0 +1,82 @@
+.homepage {
+  padding: 20px;
+}
+
+.homepage-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 15px; /* Bordi arrotondati per ogni sezione */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 colonne per ogni riga */
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 220px;
+}
+
+.card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card .card-img {
+  height: 350px;
+}
+
+.series-card .card-img {
+  height: 350px;
+}
+
+.people-card {
+  width: 160px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.people-card .card-img {
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.people-card .card-title {
+  font-size: 1rem;
+  padding: 5px;
+  text-align: center;
+}

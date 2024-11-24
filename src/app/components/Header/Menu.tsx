@@ -21,6 +21,7 @@ const Menu = () => {
         <div className="header">
             <ul className="nav">
                 <li><UserInfo /></li>
+                <li><NavLinkClient path="/">HOME</NavLinkClient></li>
                 <li>
                     <form onSubmit={handleSearch}>
                         <input
@@ -32,8 +33,10 @@ const Menu = () => {
                         <button type="submit">Search</button>
                     </form>
                 </li>
-                <li><NavLinkClient path="/movies">Movies</NavLinkClient></li>
-                <li><NavLinkClient path="/genres">Genres</NavLinkClient></li>
+                <li><NavLinkClient path="/movies">MOVIES</NavLinkClient></li>
+                <li><NavLinkClient path="/genres">GENRES</NavLinkClient></li>
+                <li><NavLinkClient path="/actors">ACTORS</NavLinkClient></li>
+
                 <li><DateTimeDisplay /></li>
             </ul>
         </div>
