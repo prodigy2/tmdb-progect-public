@@ -1,0 +1,13 @@
+.movie-detail-page {
+    padding: 20px;
+}
+
+.movie-cast-section {
+    margin-top: 40px;
+}
+
+.cast-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

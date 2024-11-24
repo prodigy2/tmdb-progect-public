@@ -1,32 +1,51 @@
-import React from 'react';
+import React from "react";
+import { notFound } from "next/navigation"; // Per gestire errori
 import getMovies from "@/app/services/api.movies";
+import CastMemberComponent from "@/app/components/CastMemberComponent/CastMemberComponent";
+import StarsRating from "@/app/components/StarsRating/StarsRating";
+import PosterPreview from "@/app/components/PosterPreview/PosterPreview";
+import "./styles.css";
 
+interface Props {
+    params: { id: string };
+}
 
-type Params = { id: string, title: string, info: string, release_date: number;};
+const MovieDetailPage = async ({ params }: Props) => {
+    const { id } = params;
 
-const MoviePage = async ({params}: {params: Params}) => {
+    // Fetch movie details and cast
+    const movieDetails = await getMovies.getMovieById(id);
+    const movieCast = await getMovies.getMovieCast(id);
 
-    const movie = await getMovies.getMovieById( params.id)
+    // Gestire il caso in cui il film non esiste
+    if (!movieDetails) {
+        notFound();
+    }
 
     return (
-        <div className={"movie-box"}>
-            <div className={'movie_card'}><img
-                src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
-                alt={movie?.title}/></div>
+        <div className="movie-detail-page">
+            <h1>{movieDetails.title}</h1>
+           <PosterPreview posterPath={movieDetails.poster_path} />
+            <p>{movieDetails.overview}</p>
 
-            <div className={"movie-text"}><h1>{movie?.title}</h1>
-                <h4>{movie?.tagline}</h4>
-                <p> {movie?.tagline}{movie?.origin_country}
-                    {movie?.badges}{movie?.popularity} </p>
 
-                    <h3>{JSON.stringify(movie?.overview)}</h3>
-                    <p>{movie?.release_date})
-                        {movie?.runtime}:{movie?.status}
-                        {movie?.name}:{movie?.vote_average}
-                    </p>
-            </div>
+                    <p>Vote: {Math.round( movieDetails.vote_average)}</p>
+                    <StarsRating rating={movieDetails.vote_average}/>
+            <section className="movie-cast-section">
+                <h2>Cast</h2>
+                <div className="cast-grid">
+                    {movieCast.slice(0, 12).map((member) => (
+                        <CastMemberComponent
+                            key={member.id}
+                            name={member.name}
+                            character={member.character}
+                            profilePath={member.profile_path}
+                        />
+                    ))}
+                </div>
+            </section>
         </div>
     );
 };
 
-export default MoviePage;
+export default MovieDetailPage;

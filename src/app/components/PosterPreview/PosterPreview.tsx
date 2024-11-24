@@ -1,16 +1,18 @@
-import React, {FC} from "react";
+// /src/components/PosterPreview.tsx
 
-type PosterPreviewProps = {
-    posterPath: string;
-}
-const PosterPreview: FC<PosterPreviewProps> = ({ posterPath }) => (
-    <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>
-        <img
-            src={`https://image.tmdb.org/t/p/w500${posterPath}`}
-            alt="Poster"
-            style={{ width: "100%", objectFit: "cover" }}
-        />
-    </div>
-);
+const PosterPreview = ({ posterPath }: { posterPath: string }) => {
+    const posterUrl = `https://image.tmdb.org/t/p/w185${posterPath}`;
+    return (
+        <div className="poster-preview">
+            <img
+                src={posterUrl}
+                alt="Movie Poster"
+                width={150} // Impostiamo la larghezza desiderata
+                height={225} // Impostiamo l'altezza desiderata
+                className="poster-image"
+            />
+        </div>
+    );
+};
 
 export default PosterPreview;

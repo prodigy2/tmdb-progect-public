@@ -5,7 +5,7 @@ const UserInfo = () => {
         <div style={styles.container}>
             <div style={styles.avatarContainer}>
                 <img
-                    src="avatar.jpg"  // Nuovo percorso dell'immagine
+                    src="/avatar.jpg"  // Nuovo percorso dell'immagine
                     alt="Jhon Doe"
                     style={styles.avatarImage}
                 />

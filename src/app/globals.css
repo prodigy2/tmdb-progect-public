@@ -174,6 +174,33 @@ a {
     opacity: 0.7; /* Opacità del video, se vuoi un effetto di sovrapposizione */
 }
 
+/* Aggiungi questo CSS per il poster */
+.poster-preview img {
+    width: 150px; /* Impostiamo una larghezza fissa */
+    height: auto; /* Manteniamo il rapporto di aspetto */
+    border-radius: 8px; /* Bordo arrotondato */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per effetto elevato */
+    transition: transform 0.3s ease; /* Aggiungiamo un effetto di transizione */
+}
+
+.poster-preview img:hover {
+    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+/* styles.css */
+.cast-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Rende l'immagine rotonda */
+    object-fit: cover; /* Ritaglia l'immagine per riempire il cerchio */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cast-member img:hover {
+    transform: scale(1.1); /* Ingrandisce l'immagine */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra più intensa */
+}
 
 
 

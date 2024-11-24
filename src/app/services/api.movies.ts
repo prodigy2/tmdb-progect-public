@@ -47,6 +47,14 @@ import {IMovie} from "../../../types";
      const data = await response.json();
      return data.cast; // Restituisce i film in cui ha recitato
  },
+ getMovieCast: async (movieId: string | number): Promise<any[]> => {
+     const response = await fetch(
+         `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
+     );
+     const data = await response.json();
+     return data.cast; // Restituisce la lista del cast
+ },
+
 
 
  }
