@@ -9,7 +9,7 @@ const DateTimeDisplay: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000);
+    }, 10000);
 
     return () => clearInterval(timer);
   }, []);

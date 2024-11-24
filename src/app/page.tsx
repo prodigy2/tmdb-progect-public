@@ -4,7 +4,7 @@ import getSeries from "@/app/services/api.series";
 import getPeople from "@/app/services/api.people";
 import MovieGridComponent from "@/app/components/MovieGridComponent/MovieGridComponent";
 import SeriesGridComponent from "@/app/components/SeriesGridComponent/SeriesGridComponent";
-import PeopleGridComponent from "@/app/components/PeopleGridComponent/PeopleGridComponent";
+import ActorsGridComponent from "@/app/components/ActorsGridComponent/ActorsGridComponent";
 import './home.css';
 
 const HomePage = async () => {
@@ -27,7 +27,7 @@ const HomePage = async () => {
 
             <section className="homepage-section people-section">
                 <h2>Trending Actors</h2>
-                <PeopleGridComponent people={trendingPeople.slice(0, 12)} />
+                <ActorsGridComponent people={trendingPeople.slice(0, 12)} />
             </section>
         </div>
     );

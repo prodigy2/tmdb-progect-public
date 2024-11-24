@@ -1,5 +1,5 @@
 import React from 'react';
-import ActorsGridComponent from "@/app/components/Actors/ActorsGridComponent";
+import ActorsGridComponent from "@/app/components/ActorsGridComponent/ActorsGridComponent";
 
 const ActorsPage = () => {
     return (
