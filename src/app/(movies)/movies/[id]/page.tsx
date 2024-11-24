@@ -1,3 +1,4 @@
+// /src/pages/MovieDetailPage.tsx
 import React from "react";
 import { notFound } from "next/navigation"; // Per gestire errori
 import getMovies from "@/app/services/api.movies";
@@ -25,12 +26,19 @@ const MovieDetailPage = async ({ params }: Props) => {
     return (
         <div className="movie-detail-page">
             <h1>{movieDetails.title}</h1>
-           <PosterPreview posterPath={movieDetails.poster_path} />
-            <p>{movieDetails.overview}</p>
 
+            {/* Container per il poster e la descrizione */}
+            <div className="movie-info-container">
+                <div className="movie-poster-container">
+                    <PosterPreview posterPath={movieDetails.poster_path} />
+                </div>
+                <div className="movie-description">
+                    <p>{movieDetails.overview}</p>
+                    <p>Vote: {Math.round(movieDetails.vote_average)}</p>
+                    <StarsRating rating={movieDetails.vote_average} />
+                </div>
+            </div>
 
-                    <p>Vote: {Math.round( movieDetails.vote_average)}</p>
-                    <StarsRating rating={movieDetails.vote_average}/>
             <section className="movie-cast-section">
                 <h2>Cast</h2>
                 <div className="cast-grid">
@@ -38,7 +46,6 @@ const MovieDetailPage = async ({ params }: Props) => {
                         <CastMemberComponent
                             key={member.id}
                             name={member.name}
-                            character={member.character}
                             profilePath={member.profile_path}
                         />
                     ))}

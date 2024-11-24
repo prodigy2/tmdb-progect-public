@@ -1,13 +1,46 @@
-.movie-detail-page {
-    padding: 20px;
+/* Cast Member */
+.cast-member {
+  position: relative;
+  text-align: center;
+  display: inline-block;
 }
 
+/* Immagine del membro del cast rotonda e senza flickering */
+.cast-member img {
+  width: 100px;  /* Imposta la dimensione fissa */
+  height: 100px; /* Imposta la dimensione fissa */
+  object-fit: cover; /* Garantisce che l'immagine si adatti correttamente all'interno del cerchio */
+  border-radius: 50%;  /* Forma rotonda */
+  transition: transform 0.3s ease;  /* Solo trasformazione, senza effetti sulla visibilità */
+}
+
+/* Effetto hover sull'immagine */
+.cast-member:hover img {
+  transform: scale(1.1);  /* Aumenta leggermente la dimensione al passaggio del mouse */
+}
+
+/* Nome dell'attore nascosto di default */
+.cast-member-name {
+  display: none;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Mostra il nome quando si passa sopra l'immagine */
+.cast-member:hover .cast-member-name {
+  display: block;
+}
+
+/* Sezione del Cast */
 .movie-cast-section {
-    margin-top: 40px;
+  padding: 20px;
+  margin-top: 40px;
 }
 
 .cast-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));  /* Colonne dinamiche */
+  gap: 15px;  /* Spazio tra le immagini */
+  justify-items: center;  /* Centra gli elementi nella griglia */
 }

@@ -187,37 +187,67 @@ a {
     transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
 }
 
-/* styles.css */
+/* Movie details container */
+.movie-info-container {
+    display: flex;  /* Layout a due colonne */
+    gap: 20px;      /* Spazio tra l'immagine e la descrizione */
+    padding: 20px;
+}
+
+/* Contenitore per il poster */
+.movie-poster-container {
+    flex-shrink: 0;  /* Evita che l'immagine venga ridimensionata */
+}
+
+/* Descrizione del film */
+.movie-description {
+    flex-grow: 1;  /* La descrizione prende tutto lo spazio rimanente */
+    max-width: 600px;  /* Impostiamo una larghezza massima per la descrizione */
+}
+
+/* Aggiungiamo margine e padding */
+.movie-description p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.movie-description h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Stili per la sezione cast */
+.movie-cast-section {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));  /* Colonne dinamiche */
+    gap: 15px;
+}
+
+/* Personalizzazioni aggiuntive se necessario */
+.cast-member {
+    text-align: center;
+}
+
 .cast-member img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Rende l'immagine rotonda */
-    object-fit: cover; /* Ritaglia l'immagine per riempire il cerchio */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Ombra leggera */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Immagini rotonde */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.cast-member img:hover {
-    transform: scale(1.1); /* Ingrandisce l'immagine */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra più intensa */
+.cast-member-name {
+    display: none;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.cast-member:hover .cast-member-name {
+    display: block;
+}
