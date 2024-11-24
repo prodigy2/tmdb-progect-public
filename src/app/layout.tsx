@@ -27,6 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+       {/* Video background */}
+                  <div className="video-background">
+                      <video autoPlay loop muted>
+                          <source src="background.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                      </video>
+                  </div>
       <Menu/>
         {children}
       </body>

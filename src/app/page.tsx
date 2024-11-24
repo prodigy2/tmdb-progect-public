@@ -15,7 +15,7 @@ const HomePage = async () => {
 
     return (
         <div className="homepage">
-            <section className="homepage-section movie-section">
+               <section className="homepage-section movie-section">
                 <h2>Popular Movies</h2>
                 <MovieGridComponent movies={popularMovies.slice(0, 6)} />
             </section>
