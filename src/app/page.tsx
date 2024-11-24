@@ -27,7 +27,7 @@ const HomePage = async () => {
 
             <section className="homepage-section people-section">
                 <h2>Trending Actors</h2>
-                <PeopleGridComponent people={trendingPeople.slice(0, 8)} />
+                <PeopleGridComponent people={trendingPeople.slice(0, 12)} />
             </section>
         </div>
     );
